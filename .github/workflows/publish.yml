@@ -1,6 +1,7 @@
 name: Docker Image CI
 
 on:
+    workflow_dispatch:
     push:
         branches: 
             - 'main'
@@ -28,11 +29,6 @@ jobs:
               uses: docker/metadata-action@v5.4.0
               with:
                   images: andreferrazz/portfolio
-                  tags: |
-                      type=ref,event=branch
-                      type=ref,event=pr
-                      type=semver,pattern={{version}},event=tag
-                      type=raw,value=latest,event=tag
             
             - name: Build the Docker image
               run: docker build . --file Dockerfile --tag andreferrazz/portfolio:latest
@@ -42,6 +38,6 @@ jobs:
               with:
                   context: .
                   file: ./Dockerfile
-                  push: true
+                  push: ${{ github.event_name != 'pull_request' }}
                   tags: ${{ steps.meta.outputs.tags }}
                   labels: ${{ steps.meta.outputs.labels }}
