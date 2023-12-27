@@ -2,9 +2,8 @@ name: Docker Image CI
 
 on:
     push:
-        branches: [ "main" ]
-    pull_request:
-        branches: [ "main" ]
+        branches: [ 'main' ]
+        tags: [ 'v*' ]
 jobs:
     build-and-push:
         name: Build Docker Image And Push To Docker Hub
@@ -24,6 +23,9 @@ jobs:
               uses: docker/metadata-action@v5.4.0
               with:
                   images: andreferrazz/portfolio
+                  tags: |
+                      type=semver,pattern={{version}}
+                      type=raw,value=latest
             
             - name: Build the Docker image
               run: docker build . --file Dockerfile --tag andreferrazz/portfolio:latest
