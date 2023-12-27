@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  portfolio:
+    image: jitesoft/lighttpd:1.4.73
+    container_name: server
+    ports:
+      - '7000:80'
+    volumes:
+      - ./src:/var/www/html
+    

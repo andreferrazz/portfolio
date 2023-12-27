@@ -1,0 +1,41 @@
+:root {
+    --primary-color: #1a73e8;
+    --secondary-color: #fff;
+    --tertiary-color: #f1f3f4;
+    --quaternary-color: #5f6368;
+    --quinary-color: #202124;
+    --senary-color: #dadce0;
+    --septenary-color: #f8f9fa;
+    --octonary-color: #e8eaed;
+    --nonary-color: #a0a4a8;
+    --denary-color: #80868b;
+    --primary-font: 'Roboto', sans-serif;
+    --max-width: 1200px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mg-0 {
+    margin: 0;
+}
+
+.pd-0 {
+    padding: 0;
+}
+
+.max-width {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
