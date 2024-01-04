@@ -20,6 +20,7 @@ export default function create(project) {
         const a = document.createElement("a")
         a.href = link.url
         a.textContent = link.label
+        a.target = "_blank"
         root.appendChild(a)
     }
 

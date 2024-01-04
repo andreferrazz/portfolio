@@ -9,13 +9,14 @@
 /** @type {Project[]} */
 export const projects = [
     {
-        title: "Portfolio",
+        title: "AndreFerraz.com",
         description: "I made this website with HTML, CSS and a bit of JavaScript.",
         links: [
             { label: "Demo", url: "#" },
-            { label: "Source Code", url: "#" },
+            { label: "Source Code", url: "https://github.com/andreferrazz/portfolio" },
         ],
         icons: [
+            { name: "devicon-docker-plain colored" },
             { name: "devicon-javascript-plain colored" },
             { name: "devicon-css3-plain colored" },
             { name: "devicon-html5-plain colored" },
