@@ -1,30 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <title>André's Protfolio</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/global.css" rel="stylesheet">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="android-chrome-512x512"
+            sizes="512x512"
+            href="img/android-chrome-512x512.png"
+        />
+        <link
+            rel="android-chrome-192x192"
+            sizes="192x192"
+            href="img/android-chrome-192x192.png"
+        />
+        <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png" />
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+        <link rel="manifest" href="img/site.webmanifest" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+        />
+        <link rel="stylesheet" href="main.css" />
+        <link rel="stylesheet" href="components/theme-changer/style.css" />
+        <link rel="stylesheet" href="components/card/style.css" />
     </head>
+
+    <!--#include virtual="components/theme-changer/template.html" -->
+    <!--#include virtual="components/card/template.html" -->
+
     <body>
-        <header class="row max-width">
-            <div class="row" style="gap: 5px;">
-                <p class="mg-0 pd-0" style="font-size: 3rem; line-height: 2.3rem; font-weight: bold;">A</p>
-                <div class="column">
-                    <p class="mg-0 pd-0">André Ferraz</p>
-                    <p class="mg-0 pd-0">Software Developer</p>
-                </div>
-            </div>
-            <div class="row" style="gap: 10px;">
-                <a href="/" role="button">EN</a>
-                <a href="/pt-BR" role="button">PT</a>
-            </div>
+        <div class="gradient"></div>
+
+        <header style="display: none">
+            <nav>
+                <a href="#projects">Projects</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="/">EN</a>
+                <a href="/pt-BR">PT</a>
+            </nav>
         </header>
 
-        <main class="max-width" >
-            <h1>Hello, my name is André Ferraz</h1>
-            <p>I'm a software developer with +3 years of experience building web applications.</p>
+        <main>
+            <section id="main">
+                <h1>André Ferraz</h1>
+                <p>software developer</p>
+            </section>
+            <section id="projects">
+                <h2>Projects</h2>
+                <div class="grid"></div>
+            </section>
+            <section id="about">
+                <h2>Who is André Ferraz?</h2>
+                <p>
+                    I'm a software developer in Brazil. I make open-source projects and write about
+                    code, movies, and any other things I want. I like good fiction stories, chess,
+                    sci-fi, reading, and gaming.
+                </p>
+            </section>
         </main>
+        <footer id="footer">
+            <p>Made by André Ferraz</p>
+            <div>
+                <a target="_blank" href="https://github.com/andreferrazz">
+                    <i class="devicon-github-original"></i>
+                    Github
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/in/andre-rodrigues-ferraz">
+                    <i class="devicon-linkedin-plain colored"></i>
+                    Linkedin
+                </a>
+                <a target="_blank" href="mailto:oandreferraz@gmail.com">
+                    <i class="devicon-google-plain colored"></i>
+                    oandreferraz@gmail.com
+                </a>
+            </div>
+        </footer>
+
+        <script type="module" src="./main.js"></script>
     </body>
 </html>
-
